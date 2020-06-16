@@ -3,20 +3,29 @@
 
 #include <QMainWindow>
 
-namespace Ui {
-class MainWindow;
-}
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
+
+class QGraphicsScene;
+class QGraphicsView;
+class GameController;
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+public slots:
+   // void startgame();
+    void adjustViewSize();
 private:
     Ui::MainWindow *ui;
+    void initScene();
+    QGraphicsScene *scene;
+    QGraphicsView *view;
+    GameController *game;
 };
-
 #endif // MAINWINDOW_H

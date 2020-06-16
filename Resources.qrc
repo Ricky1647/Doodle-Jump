@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>project3/1.jpg</file>
+        <file>project3/bullet.png</file>
+        <file>project3/doodle.png</file>
+        <file>project3/hole.png</file>
+        <file>project3/monster.png</file>
+        <file>project3/pause.png</file>
+        <file>project3/plat.png</file>
+        <file>project3/portal.png</file>
+        <file>project3/resume.png</file>
+        <file>project3/rick.png</file>
+        <file>project3/spaceship.png</file>
+        <file>project3/sun.png</file>
+        <file>project3/weapon.png</file>
+    </qresource>
+</RCC>

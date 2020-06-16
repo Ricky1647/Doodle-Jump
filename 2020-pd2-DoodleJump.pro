@@ -25,11 +25,30 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        blackhole.cpp \
+        bullet.cpp \
+        gamecontroller.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        monster.cpp \
+        pause.cpp \
+        plat.cpp \
+        player.cpp \
+        spaceship.cpp \
+        weapon.cpp
 
 HEADERS += \
-        mainwindow.h
+        blackhole.h \
+        bullet.h \
+        constants.h \
+        gamecontroller.h \
+        mainwindow.h \
+        monster.h \
+        pause.h \
+        plat.h \
+        player.h \
+        spaceship.h \
+        weapon.h
 
 FORMS += \
         mainwindow.ui
@@ -38,3 +57,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Resources.qrc
