@@ -47,6 +47,10 @@ void Monster::handleCollisions_Bullet(){
                 prepareGeometryChange();
                 controller.bigheaddie();
         }
+        else if(collidingItem->data(GD_Type) == GO_Rick)
+            die();
+        else if(collidingItem->data(GD_Type) == GO_Spaceship)
+            die();
     }
 }
 void Monster::die()

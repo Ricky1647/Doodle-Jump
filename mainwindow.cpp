@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
      setCentralWidget(view);
      resize(500 ,644);
      initScene();
+     initSceneBackground();
      QTimer::singleShot(0, this, SLOT(adjustViewSize()));
       QTimer time(0);
       game = new GameController(*scene, this);
@@ -30,4 +31,12 @@ void MainWindow::initScene()
 void MainWindow::adjustViewSize()
 {
     view->fitInView(scene->sceneRect(), Qt::KeepAspectRatioByExpanding);
+}
+void MainWindow::initSceneBackground(){
+    qreal TILE_SIZE = 25;
+    QPixmap bg(TILE_SIZE, TILE_SIZE);
+    QPainter p(&bg);
+    p.setBrush(QBrush(Qt::white));
+    p.drawRect(0, 0, TILE_SIZE, TILE_SIZE);
+    view->setBackgroundBrush(QBrush(bg));
 }

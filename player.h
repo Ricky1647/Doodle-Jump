@@ -26,7 +26,12 @@ public:
     void handleCollisions_plat();
     void handleCollisions_weapon();
     void handleCollisions_spaceship();
+    //void handleCollisions_coin();
      //void handleCollisions_monster();
+
+    //花錢變身
+    void change();
+
     float dy=0;
     float y=0;
     QPointF cor; //座標

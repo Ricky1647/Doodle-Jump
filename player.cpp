@@ -53,6 +53,7 @@ void Player::advance(int step)
      checkheight();
     setPos(cor);
     controller.showscore();
+    controller.showcoin();
     controller.fight();
     if(step1<0)
     {
@@ -60,6 +61,10 @@ void Player::advance(int step)
         setData(GD_Type,GO_Doodle);
         controller.pause();
         controller.resume();
+    }
+    if(cor.ry()>600)
+    {
+       controller.doodledie();
     }
 
 }
@@ -86,8 +91,9 @@ void Player::handleCollisions_weapon(){
             //controller.sansPushBox(this, (Box*)collidingItem);
             //controller.doodlehitplat(this,(Plat*)collidingItem);
             duck=":/project3/rick.png";//成功變換路徑更換圖片
-            setData(GD_Type,GO_Bullet);
-            step1=300;
+            setData(GD_Type,GO_Rick);
+            step1=100;
+            controller.doodlegetweapon();
                        }
     }
 }
@@ -97,10 +103,28 @@ void Player::handleCollisions_spaceship(){
         if (collidingItem->data(GD_Type) == GO_Spaceship) {
             duck=":/project3/spaceship.png";//成功變換路徑更換圖片
             setData(GD_Type,GO_Spaceship);
-            step1=300;
+            step1=100;
                        }
     }
 }
+
+
+void Player::change()
+{
+    duck=":/project3/spaceship.png";//成功變換路徑更換圖片
+    setData(GD_Type,GO_Spaceship);
+    step1=100;
+    //亂試試試看
+
+}
+/*void Player::handleCollisions_coin(){
+    QList<QGraphicsItem *> collisions = collidingItems(Qt::IntersectsItemShape);
+    foreach(QGraphicsItem *collidingItem, collisions) {
+        if (collidingItem->data(GD_Type) == GO_Coin) {
+
+                       }
+    }
+}*/
 
 
 

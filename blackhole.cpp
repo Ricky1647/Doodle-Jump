@@ -24,4 +24,13 @@ void Blackhole::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidg
 void Blackhole::advance(int step)
 {
     setPos(cor);
+    handleCollisions_Doodle();
+}
+void Blackhole::handleCollisions_Doodle(){
+    QList<QGraphicsItem *> collisions = collidingItems(Qt::IntersectsItemShape);
+    foreach(QGraphicsItem *collidingItem, collisions) {
+        if (collidingItem->data(GD_Type) == GO_Doodle) {
+            controller.doodlehithole(this,(Player *)collidingItem);
+        }
+    }
 }

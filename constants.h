@@ -12,6 +12,8 @@ enum GameObjectTypes {
     GO_BlackHole,
     GO_Doodle,
     GO_DUCK,
-    GO_Spaceship
+    GO_Spaceship,
+    GO_Coin,
+    GO_Rick
 };
 #endif // CONSTANTS_H

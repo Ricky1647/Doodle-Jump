@@ -10,7 +10,8 @@ class Plat:public QGraphicsItem
 public:
     Plat(GameController &controller);
     QRectF boundingRect() const;
-     void paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *);//使用畫畫
+    //下面這個函數要override
+    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *);//使用畫畫
     QPointF cor;
 
      void down();
@@ -18,7 +19,8 @@ protected:
     void checkheight();
     GameController &controller;
     QRectF target;
-    void advance(int step);
+    //下面這個函數要override
+    virtual void advance(int step);
 };
 
 #endif // PLAT_H

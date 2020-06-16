@@ -24,6 +24,7 @@ public slots:
 private:
     Ui::MainWindow *ui;
     void initScene();
+    void initSceneBackground();//只是加橫線現在不用加
     QGraphicsScene *scene;
     QGraphicsView *view;
     GameController *game;

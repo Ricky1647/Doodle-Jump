@@ -13,5 +13,8 @@
         <file>project3/spaceship.png</file>
         <file>project3/sun.png</file>
         <file>project3/weapon.png</file>
+        <file>project3/coin.png</file>
+        <file>project3/goods.png</file>
+        <file>project3/plat_2.png</file>
     </qresource>
 </RCC>

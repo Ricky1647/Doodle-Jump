@@ -27,12 +27,15 @@ CONFIG += c++11
 SOURCES += \
         blackhole.cpp \
         bullet.cpp \
+        coin.cpp \
         gamecontroller.cpp \
+        goods.cpp \
         main.cpp \
         mainwindow.cpp \
         monster.cpp \
         pause.cpp \
         plat.cpp \
+        plat_poly.cpp \
         player.cpp \
         spaceship.cpp \
         weapon.cpp
@@ -40,12 +43,15 @@ SOURCES += \
 HEADERS += \
         blackhole.h \
         bullet.h \
+        coin.h \
         constants.h \
         gamecontroller.h \
+        goods.h \
         mainwindow.h \
         monster.h \
         pause.h \
         plat.h \
+        plat_poly.h \
         player.h \
         spaceship.h \
         weapon.h
